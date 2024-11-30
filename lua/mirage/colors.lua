@@ -44,7 +44,7 @@ else
 	-- background colors
 	colors.bg = config.transparent and "NONE" or "#212733"
 	colors.bgDark = "#212733"
-	colors.bgDarker = "#292929"
+	colors.bgDarker = "#212733"
 	colors.bgFloat = "#383838"
 	colors.bgOption = "#282828"
 	-- foreground colors

@@ -6,7 +6,7 @@ local config = {
 			comments = false,
 			keywords = true,
 			functions = false,
-			strings = true,
+			strings = false,
 			variables = false,
 			bufferline = false,
 		},

@@ -144,7 +144,7 @@ local function set_groups()
 		Italic = { italic = true },
 		Ignore = { fg = colors.bg },
 		Error = { link = "ErrorMsg" },
-		Todo = { fg = colors.orange, bold = true },
+		Todo = { fg = colors.blue, bold = true },
 
 		-- LspReferenceText = {},
 		-- LspReferenceRead = {},
