@@ -8,7 +8,7 @@ local colors = {
 if vim.o.background == "light" then
 	-- background colors
 	colors.bg = config.transparent and "NONE" or "#ffffff"
-	colors.bgDark = "#dddddd"
+	colors.bgDark = "#606f80"
 	colors.bgDarker = "#f6f6f6"
 	colors.bgFloat = "#E0E0E0"
 	colors.bgOption = "#EDEDED"
@@ -32,6 +32,7 @@ if vim.o.background == "light" then
 	colors.redDark = "#D32F2F"
 	colors.orange = "#f29718"
 	colors.blueLight = "#1976D2"
+	colors.turquoise = "#4EC9B0"
 	colors.comment = "#848484"
 	colors.orangeLight = "#dd8500"
 	colors.green = "#22863a"
