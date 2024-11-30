@@ -68,6 +68,7 @@ else
 	colors.purple = "#b392f0"
 	colors.blueLight = "#9db1c5"
 	colors.orangeLight = "#ffab70"
+	colors.yellow = "#DCDCAA"
 	colors.yellowDark = "#ffcc66"
 	colors.green = "#cbe645"
 	colors.greenLight = "#bae67e"
