@@ -28,9 +28,9 @@ end
 
 local function set_groups()
 	local bg = config.transparent and "NONE" or colors.bg
-	local diff_add = utils.shade(colors.green, 0.5, colors.bg)
+	local diff_add = utils.shade(colors.greenDark, 0.5, colors.bg)
 	local diff_delete = utils.shade(colors.red, 0.5, colors.bg)
-	local diff_change = utils.shade(colors.blue, 0.5, colors.bg)
+	local diff_change = utils.shade(colors.blueDark, 0.5, colors.bg)
 	local diff_text = utils.shade(colors.yellowDark, 0.5, colors.bg)
 
 	local groups = {
@@ -39,7 +39,7 @@ local function set_groups()
 		LineNr = { fg = colors.fgLineNr },
 		ColorColumn = { bg = utils.shade(colors.blueLight, 0.5, colors.bg) },
 		Conceal = {},
-		Cursor = { fg = colors.bg, bg = colors.fg },
+		Cursor = { fg = colors.bg, bg = colors.orange },
 		lCursor = { link = "Cursor" },
 		CursorIM = { link = "Cursor" },
 		CursorLine = { bg = colors.bgDarker },

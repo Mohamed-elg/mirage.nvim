@@ -43,7 +43,7 @@ if vim.o.background == "light" then
 else
 	-- background colors
 	colors.bg = config.transparent and "NONE" or "#212733"
-	colors.bgDark = "#212733"
+	colors.bgDark = "#7386998a"
 	colors.bgDarker = "#212733"
 	colors.bgFloat = "#383838"
 	colors.bgOption = "#282828"
@@ -57,19 +57,20 @@ else
 	colors.fgSelection = "#EAEAEA"
 	colors.fgSelectionInactive = "#F5F5F5"
 	-- border colors
-	colors.border = "#343d4a"
-	colors.borderFocus = "#7386998a"
-	colors.borderDarker = "#363636"
+	colors.border = "#212733"
+	colors.borderFocus = "#363636"
+	colors.borderDarker = "#212733"
 	-- ui colors
 	colors.red = "#FF7A84"
 	colors.blue = "#569cd6"
+	colors.blueDark = "#4682B4"
 	colors.orange = "#FF9800"
 	colors.purple = "#b392f0"
 	colors.blueLight = "#9db1c5"
 	colors.orangeLight = "#ffab70"
 	colors.yellowDark = "#ffcc66"
 	colors.green = "#bae67e"
-	-- colors.green = "#22863a"
+	colors.greenDark = "#22863a"
 	colors.redDark = "#cd3131"
 	colors.purpleDark = "#800080"
 	colors.comment = "#6b737c"
