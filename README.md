@@ -1,6 +1,6 @@
 <div align="center">
 
-# Mirage theme
+# Mirage NeoVim theme
 
 <br/>
 <br/>
