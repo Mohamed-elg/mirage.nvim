@@ -1,8 +1,8 @@
-local colors = require("my-theme.colors")
-local config = require("my-theme.config")
-local utils = require("my-theme.utils")
-local bufferline = require("my-theme.integrations.bufferline")
-local cmp = require("my-theme.integrations.cmp")
+local colors = require("mirage.colors")
+local config = require("mirage.config")
+local utils = require("mirage.utils")
+local bufferline = require("mirage.integrations.bufferline")
+local cmp = require("mirage.integrations.cmp")
 local theme = {}
 
 local function set_terminal_colors()
@@ -14,7 +14,7 @@ local function set_terminal_colors()
 	vim.g.terminal_color_5 = colors.purple
 	vim.g.terminal_color_6 = colors.blueLight
 	vim.g.terminal_color_7 = colors.fg
-	vim.g.terminal_color_8 = colors.fgInactive
+	vim.g.terminal_color_8 = colors.fgAlt
 	vim.g.terminal_color_9 = colors.redDark
 	vim.g.terminal_color_10 = colors.orangeLight
 	vim.g.terminal_color_11 = colors.orange
@@ -28,10 +28,11 @@ end
 
 local function set_groups()
 	local bg = config.transparent and "NONE" or colors.bg
-	local diff_add = utils.shade(colors.green, 0.5, colors.bg)
-	local diff_delete = utils.shade(colors.red, 0.5, colors.bg)
-	local diff_change = utils.shade(colors.blue, 0.5, colors.bg)
-	local diff_text = utils.shade(colors.yellowDark, 0.5, colors.bg)
+	local diff_add = utils.shade(colors.white, 1, colors.bg)
+	local diff_delete = utils.shade(colors.white, 1, colors.bg)
+	local diff_change = utils.shade(colors.white, 1, colors.bg)
+	-- local diff_text = utils.shade(colors.yellowDark, 1, colors.bg)
+	local diff_text = colors.fgDisabled
 
 	local groups = {
 		-- base
@@ -39,21 +40,22 @@ local function set_groups()
 		LineNr = { fg = colors.fgLineNr },
 		ColorColumn = { bg = utils.shade(colors.blueLight, 0.5, colors.bg) },
 		Conceal = {},
-		Cursor = { fg = colors.bg, bg = colors.fg },
+		Cursor = { fg = colors.yellowDark, bg = colors.yellowDark },
 		lCursor = { link = "Cursor" },
 		CursorIM = { link = "Cursor" },
-		CursorLine = { bg = colors.bgDarker },
+		CursorLine = { bg = colors.bg },
 		CursorColumn = { link = "CursorLine" },
 		Directory = { fg = colors.blue },
 		DiffAdd = { bg = bg, fg = diff_add },
 		DiffChange = { bg = bg, fg = diff_change },
 		DiffDelete = { bg = bg, fg = diff_delete },
 		DiffText = { bg = bg, fg = diff_text },
-		EndOfBuffer = { fg = colors.purple },
+		GitSignsCurrentLineBlame = { link = "Comment" },
+		EndOfBuffer = { fg = colors.yellowDark },
 		TermCursor = { link = "Cursor" },
 		TermCursorNC = { link = "Cursor" },
 		ErrorMsg = { fg = colors.red },
-		VertSplit = { fg = colors.border, bg = bg },
+		VertSplit = { fg = colors.fg, bg = bg },
 		Winseparator = { link = "VertSplit" },
 		SignColumn = { link = "Normal" },
 		Folded = { fg = colors.fg, bg = colors.bgDarker },
@@ -76,11 +78,12 @@ local function set_groups()
 		Question = { fg = colors.blue },
 		QuickFixLine = { fg = colors.blue },
 		SpecialKey = { fg = colors.symbol },
-		StatusLine = { fg = colors.fg, bg = bg },
-		StatusLineNC = { fg = colors.fgInactive, bg = colors.bgDark },
+		-- StatusLine = { fg = colors.white, bg = colors.yellowDark },
+		-- StatusLineNC = { fg = colors.white, bg = colors.bgDark },
 		TabLine = { bg = colors.bgDark, fg = colors.fgInactive },
 		TabLineFill = { link = "TabLine" },
-		TabLineSel = { bg = colors.bg, fg = colors.fgAlt },
+		TabLineSel = { bg = colors.bg, fg = colors.yellowDark },
+		-- TabLineSel = { bg = colors.bg, fg = colors.fgAlt },
 		Search = { bg = utils.shade(colors.orangeLight, 0.40, colors.bg) },
 		SpellBad = { undercurl = true, sp = colors.red },
 		SpellCap = { undercurl = true, sp = colors.blue },
@@ -89,7 +92,7 @@ local function set_groups()
 		Title = { fg = colors.blue },
 		Visual = { bg = utils.shade(colors.blue, 0.40, colors.bg) },
 		VisualNOS = { link = "Visual" },
-		WarningMsg = { fg = colors.orange },
+		WarningMsg = { fg = colors.yellow },
 		Whitespace = { fg = colors.symbol },
 		WildMenu = { bg = colors.bgOption },
 		Comment = { fg = colors.comment, italic = config.italics.comments or false },
@@ -102,13 +105,13 @@ local function set_groups()
 		Float = { link = "Number" },
 
 		Identifier = { fg = colors.fg },
-		Function = { fg = colors.purple },
-		Method = { fg = colors.purple },
+		Function = { fg = colors.yellow },
+		Method = { link = "Function" },
 		Property = { fg = colors.blue },
 		Field = { link = "Property" },
-		Parameter = { fg = colors.fg },
-		Statement = { fg = colors.red },
-		Conditional = { fg = colors.red },
+		Parameter = { fg = colors.blueLight },
+		Statement = { fg = colors.blue },
+		Conditional = { fg = colors.purple },
 		-- Repeat = {},
 		Label = { fg = colors.blue },
 		Operator = { fg = colors.red },
@@ -117,11 +120,11 @@ local function set_groups()
 
 		PreProc = { link = "Keyword" },
 		-- Include = {},
-		Define = { fg = colors.purple },
+		Define = { fg = colors.blueLight },
 		Macro = { link = "Define" },
 		PreCondit = { fg = colors.red },
 
-		Type = { fg = colors.purple },
+		Type = { fg = colors.turquoise },
 		Struct = { link = "Type" },
 		Class = { link = "Type" },
 
@@ -144,7 +147,11 @@ local function set_groups()
 		Italic = { italic = true },
 		Ignore = { fg = colors.bg },
 		Error = { link = "ErrorMsg" },
-		Todo = { fg = colors.orange, bold = true },
+		Todo = { fg = colors.blue, bold = true },
+
+		-- Flash
+		FlashMatch = { fg = colors.fgAlt },
+		FlashLabel = { fg = colors.yellowDark },
 
 		-- LspReferenceText = {},
 		-- LspReferenceRead = {},
@@ -154,9 +161,9 @@ local function set_groups()
 		-- LspSignatureActiveParameter = {},
 
 		DiagnosticError = { link = "Error" },
-		DiagnosticWarn = { link = "WarningMsg" },
+		DiagnosticWarn = { fg = colors.yellow },
 		DiagnosticInfo = { fg = colors.blue },
-		DiagnosticHint = { fg = colors.yellowDark },
+		DiagnosticHint = { fg = colors.yellowDarker },
 		DiagnosticVirtualTextError = { link = "DiagnosticError" },
 		DiagnosticVirtualTextWarn = { link = "DiagnosticWarn" },
 		DiagnosticVirtualTextInfo = { link = "DiagnosticInfo" },
@@ -218,7 +225,7 @@ local function set_groups()
 		["@number"] = { link = "Number" },
 		["@boolean"] = { link = "Boolean" },
 		-- ["@float"] = {},
-		["@function"] = { link = "Function", italic = config.italics.functions or false },
+		["@function"] = { link = "Function", fg = colors.yellowDark, italic = config.italics.functions or false },
 		["@function.call"] = { link = "Function" },
 		["@function.builtin"] = { link = "Function" },
 		-- ["@function.macro"] = {},
@@ -226,14 +233,14 @@ local function set_groups()
 		["@method"] = { link = "Function" },
 		["@field"] = { link = "Property" },
 		["@property"] = { link = "Property" },
-		["@constructor"] = { fg = colors.blue },
+		["@constructor"] = { fg = colors.turquoise },
 		-- ["@conditional"] = {},
 		-- ["@repeat"] = {},
 		["@label"] = { link = "Label" },
 		["@operator"] = { link = "Operator" },
 		["@exception"] = { link = "Exception" },
-		["@variable"] = { fg = colors.fg, italic = config.italics.variables or false },
-		["@variable.builtin"] = { fg = colors.fg, italic = config.italics.variables or false },
+		["@variable"] = { fg = colors.blueLight, italic = config.italics.variables or false },
+		["@variable.builtin"] = { fg = colors.blueLight, italic = config.italics.variables or false },
 		["@type"] = { link = "Type" },
 		["@type.definition"] = { fg = colors.fg },
 		["@type.builtin"] = { fg = colors.blue },
@@ -276,12 +283,64 @@ local function set_groups()
 		["@lsp.type.decorator"] = { link = "@label" },
 		["@lsp.typemod.function.declaration"] = { link = "@function" },
 		["@lsp.typemod.function.readonly"] = { link = "@function" },
+
+		-- Python
+		["pythonBuiltinObj"] = { fg = colors.blueLight },
+		["pythonBuiltin"] = { fg = colors.blueLight },
+		["pythonStatement"] = { fg = colors.blue },
+		["pythonOperator"] = { fg = colors.blue },
+		["pythonBuiltinType"] = { fg = colors.turquoise },
+		["@constructor.python"] = { fg = colors.turquoise },
+		["pythonException"] = { fg = colors.pink },
+		["pythonClassDef"] = { fg = colors.turquoise },
+		["pythonBoolean"] = { fg = colors.blueLight },
+		["pythonNone"] = { fg = colors.blue },
+		["pythonTodo"] = { fg = colors.blue },
+
+		-- JSON
+		["jsonKeyword"] = { fg = colors.blueLight },
+		["jsonEscape"] = { fg = colors.orangeLight },
+		["jsonNull"] = { fg = colors.blue },
+		["jsonBoolean"] = { fg = colors.blue },
+
+		-- Markdown
+		["markdownBold"] = { fg = colors.blue, bold = true },
+		["markdownCode"] = { fg = colors.orange },
+		["markdownUrl"] = { fg = colors.blue, underline = true },
+		["markdownEscape"] = { fg = colors.orangeLight },
+
+		-- YAML
+		["yamlKey"] = { fg = colors.redDark },
+		["yamlConstant"] = { fg = colors.redDark },
+
+		-- Lua
+		["luaFuncCall"] = { fg = colors.yellow },
+		["luaFuncArgName"] = { fg = colors.blueLight },
+		["luaFuncKeyword"] = { fg = colors.pink },
+		["luaLocal"] = { fg = colors.pink },
+		["luaBuiltIn"] = { fg = colors.blue },
+
+		-- Dashboard
+		["DashboardHeader"] = { fg = colors.yellowDark },
+		["DashboardFooter"] = { fg = colors.yellowDark, italic = true },
+
+		-- NeoTree
+		["NeoTreeCursorLine"] = { bg = colors.fgInactive },
+		["NeoTreeFloatBorder"] = { fg = colors.yellowDark },
+
+		-- Telescope
+		["TelescopeResultsBorder"] = { fg = colors.yellowDark },
+		["TelescopePreviewBorder"] = { fg = colors.yellowDark },
+		["TelescopePromptBorder"] = { fg = colors.yellowDark },
+
+		-- Harpoon
+		["HarpoonBorder"] = { fg = colors.yellowDark },
 	}
 
-  -- integrations
-  groups = vim.tbl_extend("force", groups, cmp.highlights())
+	-- integrations
+	groups = vim.tbl_extend("force", groups, cmp.highlights())
 
-  -- overrides
+	-- overrides
 	groups =
 		vim.tbl_extend("force", groups, type(config.overrides) == "function" and config.overrides() or config.overrides)
 
@@ -299,7 +358,7 @@ end
 
 function theme.colorscheme()
 	if vim.version().minor < 8 then
-		vim.notify("Neovim 0.8+ is required for my-theme colorscheme", vim.log.levels.ERROR, { title = "Min Theme" })
+		vim.notify("Neovim 0.8+ is required for mirage colorscheme", vim.log.levels.ERROR, { title = "Mirage" })
 		return
 	end
 
@@ -310,7 +369,7 @@ function theme.colorscheme()
 
 	vim.g.VM_theme_set_by_colorscheme = true -- Required for Visual Multi
 	vim.o.termguicolors = true
-	vim.g.colors_name = "my-theme"
+	vim.g.colors_name = "mirage"
 
 	set_terminal_colors()
 	set_groups()

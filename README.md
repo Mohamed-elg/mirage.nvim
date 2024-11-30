@@ -1,11 +1,11 @@
 <div align="center">
 
-# My Theme
+# Mirage NeoVim theme
 
 <br/>
 <br/>
 
-![preview]() 
+![preview](./preview.png)
 
 <br/>
 <br/>
@@ -17,21 +17,21 @@
 1. Using `Lazy`:
 
 ```lua
-{ 'my-user/my-theme.nvim' },
+{ 'Mohamed-elg/mirage.nvim' },
 ```
 
 2. Using `Packer`:
 
 ```lua
-use 'my-user/my-theme.nvim'
+use 'Mohamed-elg/mirage.nvim'
 ```
 
 ## Configuration
 
-To configure the plugin, you can call require('my-theme').setup({}), passing the table with the values in it. The following are the **defaults**:
+To configure the plugin, you can call require('mirage').setup({}), passing the table with the values in it. The following are the **defaults**:
 
 ```lua
-require('my-theme').setup({
+require('mirage').setup({
     -- (note: if your configuration sets vim.o.background the following option will do nothing!)
     theme = 'dark', -- String: 'dark' or 'light', determines the colorscheme used
     transparent = false, -- Boolean: Sets the background to transparent
@@ -58,7 +58,7 @@ To use the theme with [bufferline.nvim](https://github.com/akinsho/bufferline.nv
 
 ```lua
 require('bufferline').setup({
-    highlights = require('my-theme').bufferline.highlights,
+    highlights = require('mirage').bufferline.highlights,
 })
 ```
 
@@ -70,4 +70,4 @@ Take a look at the [Development Guide](./DEVELOPMENT_GUIDE.md)
 
 ## License
 
-[MIT License](LICENSE) 
+[MIT License](LICENSE)
