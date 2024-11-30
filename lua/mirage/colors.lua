@@ -1,4 +1,4 @@
-local config = require("my-theme.config")
+local config = require("mirage.config")
 
 local colors = {
 	white = "#ffffff",
@@ -27,7 +27,7 @@ if vim.o.background == "light" then
 	colors.borderDarker = "#999999"
 	-- ui colors
 	colors.blue = "#6871ff"
-	colors.red = "#d6656a"
+	colors.red = "#ff3333"
 	colors.purple = "#9966cc"
 	colors.redDark = "#D32F2F"
 	colors.orange = "#f29718"
@@ -35,14 +35,14 @@ if vim.o.background == "light" then
 	colors.comment = "#848484"
 	colors.orangeLight = "#dd8500"
 	colors.green = "#22863a"
-	colors.yellowDark = "#cd9731"
+	colors.yellowDark = "#ffcc66"
 	colors.purpleDark = "#800080"
 	colors.symbol = "#a1a1a1"
 	colors.primary = "#000000"
 	colors.terminalbrightblack = "#333333"
 else
 	-- background colors
-	colors.bg = config.transparent and "NONE" or "#212121"
+	colors.bg = config.transparent and "NONE" or "#212733"
 	colors.bgDark = "#1A1A1A"
 	colors.bgDarker = "#292929"
 	colors.bgFloat = "#383838"
@@ -57,8 +57,8 @@ else
 	colors.fgSelection = "#EAEAEA"
 	colors.fgSelectionInactive = "#F5F5F5"
 	-- border colors
-	colors.border = "#2A2A2A"
-	colors.borderFocus = "#444444"
+	colors.border = "#343d4a"
+	colors.borderFocus = "#7386998a"
 	colors.borderDarker = "#363636"
 	-- ui colors
 	colors.red = "#FF7A84"
@@ -67,8 +67,9 @@ else
 	colors.purple = "#b392f0"
 	colors.blueLight = "#9db1c5"
 	colors.orangeLight = "#ffab70"
-	colors.yellowDark = "#cd9731"
-	colors.green = "#22863a"
+	colors.yellowDark = "#ffcc66"
+	colors.green = "#bae67e"
+	-- colors.green = "#22863a"
 	colors.redDark = "#cd3131"
 	colors.purpleDark = "#800080"
 	colors.comment = "#6b737c"

@@ -1,5 +1,5 @@
-local colors = require("my-theme.colors")
-local config = require("my-theme.config")
+local colors = require("mirage.colors")
+local config = require("mirage.config")
 local theme = {}
 
 local bg = config.transparent and "NONE" or colors.bg
@@ -11,7 +11,7 @@ theme.normal = {
 }
 
 theme.insert = {
-	a = { bg = colors.red, fg = colors.bg, gui = "bold" },
+	a = { bg = colors.green, fg = colors.bg, gui = "bold" },
 	b = { bg = bg, fg = colors.comment },
 }
 
@@ -21,17 +21,17 @@ theme.terminal = {
 }
 
 theme.command = {
-	a = { bg = colors.green, fg = colors.bg, gui = "bold" },
+	a = { bg = colors.orange, fg = colors.bg, gui = "bold" },
 	b = { bg = bg, fg = colors.comment },
 }
 
 theme.visual = {
-	a = { bg = colors.purple, fg = colors.bg, gui = "bold" },
+	a = { bg = colors.red, fg = colors.bg, gui = "bold" },
 	b = { bg = bg, fg = colors.comment },
 }
 
 theme.replace = {
-	a = { bg = colors.orange, fg = colors.bg, gui = "bold" },
+	a = { bg = colors.redDark, fg = colors.bg, gui = "bold" },
 	b = { bg = bg, fg = colors.comment },
 }
 

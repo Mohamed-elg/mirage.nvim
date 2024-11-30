@@ -65,7 +65,7 @@ require("lazy").setup({
 	},
 })
 
-local theme = require("my-theme/init")
+local theme = require("mirage/init")
 
 theme.setup({
 	theme = "dark",
@@ -73,9 +73,9 @@ theme.setup({
 	italics = {
 		comments = false,
 		keywords = true,
-		functions = true,
+		functions = false,
 		strings = false,
-		variables = true,
+		variables = false,
 	},
 })
 
