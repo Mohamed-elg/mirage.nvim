@@ -43,7 +43,7 @@ if vim.o.background == "light" then
 else
 	-- background colors
 	colors.bg = config.transparent and "NONE" or "#212733"
-	colors.bgDark = "#1A1A1A"
+	colors.bgDark = "#212733"
 	colors.bgDarker = "#292929"
 	colors.bgFloat = "#383838"
 	colors.bgOption = "#282828"
