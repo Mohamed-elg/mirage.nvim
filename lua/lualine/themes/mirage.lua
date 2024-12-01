@@ -39,8 +39,8 @@ theme.replace = {
 
 theme.inactive = {
 	a = { fg = colors.comment, bg = colors.bgDarker },
-	b = { bg = bg, fg = fg, gui = "bold" },
-	c = { bg = bg, fg = fg },
+	b = { bg = badge, fg = fg, gui = "bold" },
+	c = { bg = badge, fg = fg },
 }
 
 return theme

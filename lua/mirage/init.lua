@@ -150,6 +150,10 @@ local function set_groups()
 
 		GitAuthor = { fg = colors.red, bg = colors.bg },
 
+		-- Flash
+		FlashMatch = { fg = colors.fgAlt },
+		FlashLabel = { fg = colors.yellowDark },
+
 		-- LspReferenceText = {},
 		-- LspReferenceRead = {},
 		-- LspReferenceWrite = {},
