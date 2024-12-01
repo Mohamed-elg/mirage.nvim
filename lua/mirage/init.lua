@@ -29,7 +29,7 @@ end
 local function set_groups()
 	local bg = config.transparent and "NONE" or colors.bg
 	local diff_add = utils.shade(colors.greenDark, 1, colors.bg)
-	local diff_delete = utils.shade(colors.red, 1, colors.bg)
+	local diff_delete = utils.shade(colors.redDark, 1, colors.bg)
 	local diff_change = utils.shade(colors.blueDark, 1, colors.bg)
 	local diff_text = utils.shade(colors.yellowDark, 1, colors.bg)
 
@@ -54,7 +54,7 @@ local function set_groups()
 		TermCursorNC = { link = "Cursor" },
 		ErrorMsg = { fg = colors.red },
 		VertSplit = { fg = colors.border, bg = colors.fgAlt },
-		Winseparator = { link = "VertSplit" },
+		Winseparator = { fg = colors.border, bg = bg },
 		SignColumn = { link = "Normal" },
 		Folded = { fg = colors.fg, bg = colors.bgDarker },
 		FoldColumn = { link = "SignColumn" },
@@ -293,6 +293,10 @@ local function set_groups()
 		-- Dashboard
 		["DashboardHeader"] = { fg = colors.yellowDark },
 		["DashboardFooter"] = { fg = colors.yellowDark },
+
+		-- NeoTree
+		["NeoTreeCursorLine"] = { bg = colors.bgDark },
+		["NeoTreeFloatBorder"] = { fg = colors.yellowDark },
 	}
 
 	-- integrations
