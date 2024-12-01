@@ -14,7 +14,7 @@ local function set_terminal_colors()
 	vim.g.terminal_color_5 = colors.purple
 	vim.g.terminal_color_6 = colors.blueLight
 	vim.g.terminal_color_7 = colors.fg
-	vim.g.terminal_color_8 = colors.fgInactive
+	vim.g.terminal_color_8 = colors.fgAlt
 	vim.g.terminal_color_9 = colors.redDark
 	vim.g.terminal_color_10 = colors.orangeLight
 	vim.g.terminal_color_11 = colors.orange
@@ -54,7 +54,7 @@ local function set_groups()
 		TermCursor = { link = "Cursor" },
 		TermCursorNC = { link = "Cursor" },
 		ErrorMsg = { fg = colors.red },
-		VertSplit = { fg = colors.borderFocus, bg = bg },
+		VertSplit = { fg = colors.fg, bg = bg },
 		Winseparator = { link = "VertSplit" },
 		SignColumn = { link = "Normal" },
 		Folded = { fg = colors.fg, bg = colors.bgDarker },
@@ -77,8 +77,8 @@ local function set_groups()
 		Question = { fg = colors.blue },
 		QuickFixLine = { fg = colors.blue },
 		SpecialKey = { fg = colors.symbol },
-		StatusLine = { fg = colors.white, bg = colors.yellowDark },
-		StatusLineNC = { fg = colors.white, bg = colors.bgDark },
+		-- StatusLine = { fg = colors.white, bg = colors.yellowDark },
+		-- StatusLineNC = { fg = colors.white, bg = colors.bgDark },
 		TabLine = { bg = colors.bgDark, fg = colors.fgInactive },
 		TabLineFill = { link = "TabLine" },
 		TabLineSel = { bg = colors.bg, fg = colors.yellowDark },
@@ -148,7 +148,7 @@ local function set_groups()
 		Error = { link = "ErrorMsg" },
 		Todo = { fg = colors.blue, bold = true },
 
-		GitAuthor = { fg = colors.comment, bg = colors.bg },
+		GitAuthor = { fg = colors.red, bg = colors.bg },
 
 		-- LspReferenceText = {},
 		-- LspReferenceRead = {},

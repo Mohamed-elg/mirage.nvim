@@ -3,7 +3,7 @@ local config = require("mirage.config")
 local theme = {}
 
 local bg = config.transparent and "NONE" or colors.yellowDarker
-local badge = colors.bgOption
+local badge = colors.bg
 local fg = colors.white
 
 theme.normal = {
