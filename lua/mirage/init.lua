@@ -290,23 +290,51 @@ local function set_groups()
 		["pythonStatement"] = { fg = colors.blue },
 		["pythonOperator"] = { fg = colors.blue },
 		["pythonBuiltinType"] = { fg = colors.turquoise },
-		["constructor.python"] = { fg = colors.turquoise },
+		["@constructor.python"] = { fg = colors.turquoise },
 		["pythonException"] = { fg = colors.pink },
 		["pythonClassDef"] = { fg = colors.turquoise },
 		["pythonBoolean"] = { fg = colors.blueLight },
 		["pythonNone"] = { fg = colors.blue },
 		["pythonTodo"] = { fg = colors.blue },
 
+		-- JSON
+		["jsonKeyword"] = { fg = colors.blueLight },
+		["jsonEscape"] = { fg = colors.orangeLight },
+		["jsonNull"] = { fg = colors.blue },
+		["jsonBoolean"] = { fg = colors.blue },
+
+		-- Markdown
+		["markdownBold"] = { fg = colors.blue, bold = true },
+		["markdownCode"] = { fg = colors.orange },
+		["markdownUrl"] = { fg = colors.blue, underline = true },
+		["markdownEscape"] = { fg = colors.orangeLight },
+
+		-- YAML
+		["yamlKey"] = { fg = colors.redDark },
+		["yamlConstant"] = { fg = colors.redDark },
+
+		-- Lua
+		["luaFuncCall"] = { fg = colors.yellow },
+		["luaFuncArgName"] = { fg = colors.blueLight },
+		["luaFuncKeyword"] = { fg = colors.pink },
+		["luaLocal"] = { fg = colors.pink },
+		["luaBuiltIn"] = { fg = colors.blue },
+
 		-- Dashboard
 		["DashboardHeader"] = { fg = colors.yellowDark },
-		["DashboardFooter"] = { fg = colors.yellowDark },
+		["DashboardFooter"] = { fg = colors.yellowDark, italic = true },
 
 		-- NeoTree
 		["NeoTreeCursorLine"] = { bg = colors.fgInactive },
 		["NeoTreeFloatBorder"] = { fg = colors.yellowDark },
 
+		-- Telescope
+		["TelescopeResultsBorder"] = { fg = colors.yellowDark },
+		["TelescopePreviewBorder"] = { fg = colors.yellowDark },
+		["TelescopePromptBorder"] = { fg = colors.yellowDark },
+
 		-- Harpoon
-		["HarpoonFloatBorder"] = { fg = colors.yellowDark },
+		["HarpoonBorder"] = { fg = colors.yellowDark },
 	}
 
 	-- integrations
