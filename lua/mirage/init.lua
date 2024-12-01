@@ -54,8 +54,8 @@ local function set_groups()
 		TermCursor = { link = "Cursor" },
 		TermCursorNC = { link = "Cursor" },
 		ErrorMsg = { fg = colors.red },
-		VertSplit = { fg = colors.fgAlt, bg = bg },
-		Winseparator = { fg = colors.border, bg = bg },
+		VertSplit = { fg = colors.borderFocus, bg = bg },
+		Winseparator = { link = "VertSplit" },
 		SignColumn = { link = "Normal" },
 		Folded = { fg = colors.fg, bg = colors.bgDarker },
 		FoldColumn = { link = "SignColumn" },
@@ -296,8 +296,11 @@ local function set_groups()
 		["DashboardFooter"] = { fg = colors.yellowDark },
 
 		-- NeoTree
-		["NeoTreeCursorLine"] = { bg = colors.bgDark },
+		["NeoTreeCursorLine"] = { bg = colors.fgInactive },
 		["NeoTreeFloatBorder"] = { fg = colors.yellowDark },
+
+		-- Harpoon
+		["HarpoonFloatBorder"] = { fg = colors.yellowDark },
 	}
 
 	-- integrations
