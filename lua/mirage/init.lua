@@ -31,7 +31,8 @@ local function set_groups()
 	local diff_add = utils.shade(colors.greenDark, 1, colors.bg)
 	local diff_delete = utils.shade(colors.redDark, 1, colors.bg)
 	local diff_change = utils.shade(colors.blueDark, 1, colors.bg)
-	local diff_text = utils.shade(colors.yellowDark, 1, colors.bg)
+	-- local diff_text = utils.shade(colors.yellowDark, 1, colors.bg)
+	local diff_text = colors.fgDisabled
 
 	local groups = {
 		-- base
@@ -49,7 +50,7 @@ local function set_groups()
 		DiffChange = { bg = bg, fg = diff_change },
 		DiffDelete = { bg = bg, fg = diff_delete },
 		DiffText = { bg = bg, fg = diff_text },
-		EndOfBuffer = { fg = colors.purple },
+		EndOfBuffer = { fg = colors.yellowDark },
 		TermCursor = { link = "Cursor" },
 		TermCursorNC = { link = "Cursor" },
 		ErrorMsg = { fg = colors.red },
