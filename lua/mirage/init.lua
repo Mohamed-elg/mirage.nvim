@@ -90,7 +90,7 @@ local function set_groups()
 		Title = { fg = colors.blue },
 		Visual = { bg = utils.shade(colors.blue, 0.40, colors.bg) },
 		VisualNOS = { link = "Visual" },
-		WarningMsg = { fg = colors.orange },
+		WarningMsg = { fg = colors.yellow },
 		Whitespace = { fg = colors.symbol },
 		WildMenu = { bg = colors.bgOption },
 		Comment = { fg = colors.comment, italic = config.italics.comments or false },
@@ -227,7 +227,7 @@ local function set_groups()
 		["@method"] = { link = "Function" },
 		["@field"] = { link = "Property" },
 		["@property"] = { link = "Property" },
-		["@constructor"] = { link = "Function" },
+		["@constructor"] = { fg = colors.turquoise },
 		-- ["@conditional"] = {},
 		-- ["@repeat"] = {},
 		["@label"] = { link = "Label" },
@@ -279,6 +279,9 @@ local function set_groups()
 		["@lsp.typemod.function.readonly"] = { link = "@function" },
 
 		-- Python
+		["@pythonBuiltinObj"] = { fg = colors.blue },
+		["@pythonBuiltinType"] = { fg = colors.turquoise },
+		["@constructor.python"] = { fg = colors.turquoise },
 		["@pythonBoolean"] = { fg = colors.blueLight },
 		["@pythonNone"] = { link = "@pythonBoolean" },
 	}
