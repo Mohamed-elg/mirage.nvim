@@ -282,8 +282,8 @@ local function set_groups()
 		["pythonBuiltinObj"] = { fg = colors.blue },
 		["pythonBuiltinType"] = { fg = colors.turquoise },
 		["constructor.python"] = { fg = colors.turquoise },
-		["pythonException"] = { fg = colors.blueLight },
-		["pythonClassDef"] = { fg = colors.blueLight },
+		["pythonException"] = { fg = colors.pink },
+		["pythonClassDef"] = { fg = colors.turquoise },
 		["pythonBoolean"] = { fg = colors.blueLight },
 		["pythonNone"] = { link = "pythonBoolean" },
 
