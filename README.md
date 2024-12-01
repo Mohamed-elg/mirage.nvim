@@ -5,7 +5,7 @@
 <br/>
 <br/>
 
-![preview]('./preview.png')
+![preview](./preview.png)
 
 <br/>
 <br/>
