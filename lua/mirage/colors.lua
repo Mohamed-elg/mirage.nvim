@@ -65,6 +65,7 @@ else
 	colors.red = "#FF7A84"
 	colors.blue = "#569cd6"
 	colors.blueDark = "#4682B4"
+	colors.turquoise = "#4EC9B0"
 	colors.orange = "#FF9800"
 	colors.purple = "#b392f0"
 	colors.blueLight = "#9db1c5"
