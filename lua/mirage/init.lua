@@ -50,7 +50,7 @@ local function set_groups()
 		DiffChange = { bg = bg, fg = diff_change },
 		DiffDelete = { bg = bg, fg = diff_delete },
 		DiffText = { bg = bg, fg = diff_text },
-		GitSignsCurrentLineBlame = {link = "Comment"}
+		GitSignsCurrentLineBlame = { link = "Comment" },
 		EndOfBuffer = { fg = colors.yellowDark },
 		TermCursor = { link = "Cursor" },
 		TermCursorNC = { link = "Cursor" },
