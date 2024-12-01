@@ -28,9 +28,9 @@ end
 
 local function set_groups()
 	local bg = config.transparent and "NONE" or colors.bg
-	local diff_add = utils.shade(colors.greenDark, 1, colors.bg)
-	local diff_delete = utils.shade(colors.redDark, 1, colors.bg)
-	local diff_change = utils.shade(colors.blueDark, 1, colors.bg)
+	local diff_add = utils.shade(colors.white, 1, colors.bg)
+	local diff_delete = utils.shade(colors.white, 1, colors.bg)
+	local diff_change = utils.shade(colors.white, 1, colors.bg)
 	-- local diff_text = utils.shade(colors.yellowDark, 1, colors.bg)
 	local diff_text = colors.fgDisabled
 
@@ -147,6 +147,8 @@ local function set_groups()
 		Ignore = { fg = colors.bg },
 		Error = { link = "ErrorMsg" },
 		Todo = { fg = colors.blue, bold = true },
+
+		GitAuthor = { fg = colors.comment, bg = colors.bg },
 
 		-- LspReferenceText = {},
 		-- LspReferenceRead = {},

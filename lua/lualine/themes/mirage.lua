@@ -3,7 +3,7 @@ local config = require("mirage.config")
 local theme = {}
 
 local bg = config.transparent and "NONE" or colors.yellowDarker
-local badge = colors.black
+local badge = colors.bgOption
 local fg = colors.white
 
 theme.normal = {
@@ -38,9 +38,9 @@ theme.replace = {
 }
 
 theme.inactive = {
-	a = { fg = colors.comment, bg = badge },
-	-- b = { bg = bg, fg = colors.yellow, gui = "bold" },
-	-- c = { bg = bg, fg = colors.yellow },
+	a = { fg = colors.comment, bg = colors.bgDarker },
+	b = { bg = bg, fg = fg, gui = "bold" },
+	c = { bg = bg, fg = fg },
 }
 
 return theme
