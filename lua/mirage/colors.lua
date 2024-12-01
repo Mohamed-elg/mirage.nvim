@@ -62,6 +62,7 @@ else
 	colors.border = "#212733"
 	colors.borderFocus = "#363636"
 	colors.borderDarker = "#212733"
+	colors.badge = "#66737f"
 	-- ui colors
 	colors.red = "#FF7A84"
 	colors.blueLight = "#9CDCFE"
