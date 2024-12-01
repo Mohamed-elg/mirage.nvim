@@ -50,6 +50,7 @@ local function set_groups()
 		DiffChange = { bg = bg, fg = diff_change },
 		DiffDelete = { bg = bg, fg = diff_delete },
 		DiffText = { bg = bg, fg = diff_text },
+		GitSignsCurrentLineBlame = {link = "Comment"}
 		EndOfBuffer = { fg = colors.yellowDark },
 		TermCursor = { link = "Cursor" },
 		TermCursorNC = { link = "Cursor" },
@@ -287,6 +288,7 @@ local function set_groups()
 
 		-- Python
 		["pythonBuiltinObj"] = { fg = colors.blueLight },
+		["pythonBuiltin"] = { fg = colors.blueLight },
 		["pythonStatement"] = { fg = colors.blue },
 		["pythonOperator"] = { fg = colors.blue },
 		["pythonBuiltinType"] = { fg = colors.turquoise },
