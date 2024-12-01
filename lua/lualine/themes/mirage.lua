@@ -2,7 +2,7 @@ local colors = require("mirage.colors")
 local config = require("mirage.config")
 local theme = {}
 
-local bg = config.transparent and "NONE" or colors.bg
+local bg = config.transparent and "NONE" or colors.yellowDark
 
 theme.normal = {
 	a = { bg = colors.blue, fg = colors.bg, gui = "bold" },
@@ -26,7 +26,7 @@ theme.command = {
 }
 
 theme.visual = {
-	a = { bg = colors.red, fg = colors.bg, gui = "bold" },
+	a = { bg = colors.purple, fg = colors.bg, gui = "bold" },
 	b = { bg = bg, fg = colors.comment },
 }
 
@@ -37,8 +37,8 @@ theme.replace = {
 
 theme.inactive = {
 	a = { bg = colors.comment, fg = colors.bg },
-	b = { bg = bg, fg = colors.orange, gui = "bold" },
-	c = { bg = bg, fg = colors.orange },
+	b = { bg = bg, fg = colors.yellow, gui = "bold" },
+	c = { bg = bg, fg = colors.yellow },
 }
 
 return theme
