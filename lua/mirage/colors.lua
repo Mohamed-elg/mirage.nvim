@@ -63,6 +63,7 @@ else
 	colors.borderDarker = "#212733"
 	-- ui colors
 	colors.red = "#FF7A84"
+	colors.blueLight = "#9CDCFE"
 	colors.blue = "#569cd6"
 	colors.blueDark = "#4682B4"
 	colors.turquoise = "#4EC9B0"

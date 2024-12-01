@@ -28,10 +28,10 @@ end
 
 local function set_groups()
 	local bg = config.transparent and "NONE" or colors.bg
-	local diff_add = utils.shade(colors.greenDark, 0.5, colors.bg)
-	local diff_delete = utils.shade(colors.red, 0.5, colors.bg)
-	local diff_change = utils.shade(colors.blueDark, 0.5, colors.bg)
-	local diff_text = utils.shade(colors.yellowDark, 0.5, colors.bg)
+	local diff_add = utils.shade(colors.greenDark, 0.75, colors.bg)
+	local diff_delete = utils.shade(colors.red, 0.75, colors.bg)
+	local diff_change = utils.shade(colors.blueDark, 0.75, colors.bg)
+	local diff_text = utils.shade(colors.yellowDark, 0.75, colors.bg)
 
 	local groups = {
 		-- base
@@ -103,7 +103,7 @@ local function set_groups()
 		Float = { link = "Number" },
 
 		Identifier = { fg = colors.fg },
-		Function = { fg = colors.yellowDark },
+		Function = { fg = colors.yellow },
 		Method = { link = "Function" },
 		Property = { fg = colors.blue },
 		Field = { link = "Property" },
@@ -118,7 +118,7 @@ local function set_groups()
 
 		PreProc = { link = "Keyword" },
 		-- Include = {},
-		Define = { fg = colors.purple },
+		Define = { fg = colors.blueLight },
 		Macro = { link = "Define" },
 		PreCondit = { fg = colors.red },
 
