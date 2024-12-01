@@ -76,7 +76,7 @@ local function set_groups()
 		Question = { fg = colors.blue },
 		QuickFixLine = { fg = colors.blue },
 		SpecialKey = { fg = colors.symbol },
-		StatusLine = { fg = colors.fg, bg = colors.bg },
+		StatusLine = { fg = colors.fg, bg = colors.yellowDark },
 		StatusLineNC = { fg = colors.fgInactive, bg = colors.bgDark },
 		TabLine = { bg = colors.bgDark, fg = colors.fgInactive },
 		TabLineFill = { link = "TabLine" },
@@ -277,6 +277,10 @@ local function set_groups()
 		["@lsp.type.decorator"] = { link = "@label" },
 		["@lsp.typemod.function.declaration"] = { link = "@function" },
 		["@lsp.typemod.function.readonly"] = { link = "@function" },
+
+		-- Python
+		["@pythonBoolean"] = { fg = colors.blueLight },
+		["@pythonNone"] = { link = "@pythonBoolean" },
 	}
 
 	-- integrations
