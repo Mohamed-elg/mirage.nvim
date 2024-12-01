@@ -306,10 +306,10 @@ local function set_groups()
 		["jsonBoolean"] = { fg = colors.blue },
 
 		-- Markdown
-		["markdownBold"] = { fg = colors.blue, bold = true },
-		["markdownCode"] = { fg = colors.orange },
-		["markdownUrl"] = { fg = colors.blue, underline = true },
-		["markdownEscape"] = { fg = colors.orangeLight },
+		-- ["markdownBold"] = { fg = colors.blue, bold = true },
+		-- ["markdownCode"] = { fg = colors.orange },
+		-- ["markdownUrl"] = { fg = colors.blue, underline = true },
+		-- ["markdownEscape"] = { fg = colors.orangeLight },
 
 		-- YAML
 		["yamlKey"] = { fg = colors.redDark },
