@@ -69,6 +69,7 @@ else
 	colors.turquoise = "#4EC9B0"
 	colors.orange = "#FF9800"
 	colors.purple = "#b392f0"
+	colors.pink = "#C586C0"
 	colors.blueLight = "#9db1c5"
 	colors.orangeLight = "#ffab70"
 	colors.yellow = "#DCDCAA"

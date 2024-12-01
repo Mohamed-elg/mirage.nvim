@@ -279,11 +279,17 @@ local function set_groups()
 		["@lsp.typemod.function.readonly"] = { link = "@function" },
 
 		-- Python
-		["@pythonBuiltinObj"] = { fg = colors.blue },
-		["@pythonBuiltinType"] = { fg = colors.turquoise },
-		["@constructor.python"] = { fg = colors.turquoise },
-		["@pythonBoolean"] = { fg = colors.blueLight },
-		["@pythonNone"] = { link = "@pythonBoolean" },
+		["pythonBuiltinObj"] = { fg = colors.blue },
+		["pythonBuiltinType"] = { fg = colors.turquoise },
+		["constructor.python"] = { fg = colors.turquoise },
+		["pythonException"] = { fg = colors.blueLight },
+		["pythonClassDef"] = { fg = colors.blueLight },
+		["pythonBoolean"] = { fg = colors.blueLight },
+		["pythonNone"] = { link = "pythonBoolean" },
+
+		-- Dashboard
+		["DashboardHeader"] = { fg = colors.yellowDark },
+		["DashboardFooter"] = { fg = colors.yellowDark },
 	}
 
 	-- integrations
