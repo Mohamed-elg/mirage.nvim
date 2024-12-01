@@ -5,9 +5,9 @@ local theme = {}
 local bg = config.transparent and "NONE" or colors.yellowDarker
 
 theme.normal = {
-	a = { bg = colors.blueDark, fg = colors.bg, gui = "bold" },
-	b = { bg = bg, fg = colors.comment },
-	c = { bg = bg, fg = colors.bg },
+	a = { fg = colors.blueDark, fg = colors.fgAlt, gui = "bold" },
+	b = { bg = bg, fg = colors.fgAlt },
+	c = { bg = bg, fg = colors.fgAlt },
 }
 
 theme.insert = {
