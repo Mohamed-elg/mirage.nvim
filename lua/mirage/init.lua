@@ -55,7 +55,7 @@ local function set_groups()
 		TermCursorNC = { link = "Cursor" },
 		ErrorMsg = { fg = colors.red },
 		VertSplit = { fg = colors.border, bg = colors.fgAlt },
-		Winseparator = { fg = colors.border, bg = bg },
+		Winseparator = { fg = colors.border, bg = colors.fgAlt },
 		SignColumn = { link = "Normal" },
 		Folded = { fg = colors.fg, bg = colors.bgDarker },
 		FoldColumn = { link = "SignColumn" },
