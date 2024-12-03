@@ -313,6 +313,40 @@ local function set_groups()
 		["yamlKey"] = { fg = colors.redDark },
 		["yamlConstant"] = { fg = colors.redDark },
 
+		-- HTML
+		["htmlTag"] = { fg = colors.fg, bold = true },
+		["htmlEndTag"] = { fg = colors.fg },
+		["htmlTagName"] = { fg = colors.blue, underline = true },
+		["htmlSpecialTagName"] = { fg = colors.blue },
+		["htmlArg"] = { fg = colors.blueLight },
+
+		-- CSS
+		["cssBraces"] = { fg = colors.fg },
+		["cssInclude"] = { fg = colors.pink },
+		["cssTagName"] = { fg = colors.yellowDark },
+		["cssClassName"] = { fg = colors.yellowDark },
+		["cssPseudoClass"] = { fg = colors.yellowDark },
+		["cssPseudoClassId"] = { fg = colors.yellowDark },
+		["cssPseudoClassLang"] = { fg = colors.yellowDark },
+		["cssIdentifier"] = { fg = colors.yellowDark },
+		["cssProp"] = { fg = colors.blueLight },
+		["cssDefinition"] = { fg = colors.blueLight },
+		["cssAttr"] = { fg = colors.orange },
+		["cssAttrRegion"] = { fg = colors.orange },
+		["cssColor"] = { fg = colors.orange },
+		["cssFunction"] = { fg = colors.orange },
+		["cssFunctionName"] = { fg = colors.orange },
+		["cssVendor"] = { fg = colors.orange },
+		["cssValueNumber"] = { fg = colors.orange },
+		["cssValueLength"] = { fg = colors.orange },
+		["cssUnitDecorators"] = { fg = colors.orange },
+		["cssStyle"] = { fg = colors.blueLight },
+		["cssImportant"] = { fg = colors.blue },
+
+		-- SH
+		["shDeref"] = { fg = colors.blueLight },
+		["shVariable"] = { fg = colors.blueLight },
+
 		-- Lua
 		["luaFuncCall"] = { fg = colors.yellow },
 		["luaFuncArgName"] = { fg = colors.blueLight },
