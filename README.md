@@ -1,11 +1,13 @@
 <div align="center">
 
-# Mirage NeoVim theme
+# Mirage Black Pearl
+
+A Neovim theme inspired by ayu_mirage and VSCode Dark+
 
 <br/>
 <br/>
 
-![preview](./preview.png)
+![preview](https://raw.githubusercontent.com/Mohamed-elg/mirage.nvim/main/preview.png)
 
 <br/>
 <br/>
