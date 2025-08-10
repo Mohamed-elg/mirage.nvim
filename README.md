@@ -1,6 +1,6 @@
 <div align="center">
 
-# Mirage Black Pearl
+# Mirage
 
 A Neovim theme inspired by ayu_mirage and VSCode Dark+
 
