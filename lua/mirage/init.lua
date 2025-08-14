@@ -314,8 +314,8 @@ local function set_groups()
 		["yamlConstant"] = { fg = colors.redDark },
 
 		-- HTML
-		["htmlTag"] = { fg = colors.fg, bold = true },
-		["htmlEndTag"] = { fg = colors.fg },
+		["htmlTag"] = { fg = colors.blue, bold = true },
+		["htmlEndTag"] = { fg = colors.blue },
 		["htmlTagName"] = { fg = colors.blue, underline = true },
 		["htmlSpecialTagName"] = { fg = colors.blue },
 		["htmlArg"] = { fg = colors.blueLight },
