@@ -137,8 +137,8 @@ local function set_groups()
 		Special = { fg = colors.symbol },
 
 		SpecialChar = { fg = colors.red },
-		Tag = { fg = colors.orangeLight },
-		Delimiter = { fg = colors.symbol },
+		-- Tag = { fg = colors.orangeLight },
+		-- Delimiter = { fg = colors.symbol },
 		-- SpecialComment = {},
 		Debug = { fg = colors.purpleDark },
 
